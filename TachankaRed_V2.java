@@ -135,6 +135,7 @@ public class TachankaRed_V2 extends LinearOpMode {
             clawServo.setPosition(0);
             colorServo.setPosition(1);
             bCurrState = (sensorColor.red() > sensorColor.blue()) && (sensorColor.red() < 500);
+      
             if ((bCurrState == true) && (bCurrState != bPrevState)) {
                 motorLeft.setPower(-.2);
                 motorRight.setPower(.2);
@@ -145,7 +146,9 @@ public class TachankaRed_V2 extends LinearOpMode {
                 }
 
 
-            } else {
+            } 
+            else
+            {
                 motorLeft.setPower(.2);
                 motorRight.setPower(-.2);
                 colorServo.setPosition(1);
